@@ -595,7 +595,6 @@ In strict compliance with Techfest evaluation rules regarding third-party techno
 | **Tailwind CSS** | `4.3.3` | High-performance CSS design system | MIT License | `@tailwindcss/vite` |
 | **Lucide React** | `0.546.0` | UI & navigation vector iconography | ISC License | `node_modules/lucide-react` |
 | **Express** | `4.21.2` | Production static HTTP server | MIT License | `node_modules/express` |
-| **Google AI Studio** | Development Tool | Architecture review & test automation | Google TOS | Development environment only |
 
 *Note: All algorithms for A\* pathfinding, raycast smoothing, spatial collision detection, POI semantic indexing, and visual clustering were authored originally by team GeoNexus.*
 

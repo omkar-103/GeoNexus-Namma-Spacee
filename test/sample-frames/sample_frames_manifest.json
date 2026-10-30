@@ -1,0 +1,26 @@
+{
+  "sequenceId": "seq_walkthrough_test_01",
+  "sourceVideo": "corridor_walkthrough_60fps.mp4",
+  "fps": 60,
+  "resolution": "1920x1080",
+  "extractedKeyframes": [
+    {
+      "frameIndex": 0,
+      "timestampSeconds": 0.5,
+      "sharpnessScore": 94.2,
+      "estimatedPose": { "x": -12.5, "y": 1.4, "z": 8.0, "yawDeg": 0.0 }
+    },
+    {
+      "frameIndex": 1,
+      "timestampSeconds": 2.0,
+      "sharpnessScore": 89.6,
+      "estimatedPose": { "x": -10.8, "y": 1.4, "z": 7.1, "yawDeg": -15.2 }
+    },
+    {
+      "frameIndex": 2,
+      "timestampSeconds": 4.5,
+      "sharpnessScore": 91.8,
+      "estimatedPose": { "x": -8.2, "y": 1.4, "z": 5.4, "yawDeg": -32.5 }
+    }
+  ]
+}

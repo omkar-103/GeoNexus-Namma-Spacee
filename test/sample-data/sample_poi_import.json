@@ -1,0 +1,30 @@
+[
+  {
+    "id": "poi-test-01",
+    "name": "Design & Innovation Studio",
+    "category": "workspace",
+    "description": "Ergonomic squad tables with digital sketching tablets and design library.",
+    "position": { "x": 5.0, "y": 0.1, "z": 4.0 },
+    "floor": 3,
+    "roomCode": "DS-301",
+    "source": "manual_pin",
+    "tags": ["design", "ui", "ux", "studio"],
+    "aliases": ["Design Bay", "Studio 1"],
+    "accessible": true,
+    "occupancyStatus": "available"
+  },
+  {
+    "id": "poi-test-02",
+    "name": "Quantum & Neural Computing Pod",
+    "category": "lab",
+    "description": "Cryogenic cooling simulation rack and neural accelerator bench.",
+    "position": { "x": -6.0, "y": 0.1, "z": -2.0 },
+    "floor": 3,
+    "roomCode": "QNT-312",
+    "source": "manual_pin",
+    "tags": ["quantum", "neural", "lab", "hardware"],
+    "aliases": ["Quantum Lab", "Deep Learning Pod"],
+    "accessible": true,
+    "occupancyStatus": "reserved"
+  }
+]
