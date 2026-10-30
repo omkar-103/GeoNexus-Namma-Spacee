@@ -1,0 +1,247 @@
+NAMMA SPACE — COMPLETE PROJECT AUDIT & DOCUMENTATION MASTER PROMPT
+Techfest 2026–27 | Round 1: 3D Reconstruction & Roaming
+
+PURPOSE
+Act as the technical documentation and code-audit agent for GeoNexus. Inspect the ENTIRE Namma Space project repository/workspace and produce an evidence-based account of exactly what has been built, what works, what is partially implemented, what is planned, and what remains missing for Round 1.
+
+Never invent features, test results, datasets, model quality, deployment status, capture methods, measurements, or performance numbers. Inspect source code, assets, configuration, package files, scripts, model files, README files, sample data and any available deployment. If something cannot be verified, label it NOT VERIFIED or NOT IMPLEMENTED.
+
+A. COMPETITION AND TEAM CONTEXT
+Competition: Namma Space
+Organizer: Techfest, IIT Bombay
+Edition: Techfest 2026–27
+Round: Round 1 — 3D Reconstruction & Roaming
+Competition ID: NAMM-474E2DF63DAA
+Team: GeoNexus
+Team ID: TM-912137DB2BC
+Team leader: Omkar Parelkar
+Email: omkarparelkar@gmail.com
+Portal currently shows: 1/4 members
+Official maximum team size: 4
+
+Official objective: Build an end-to-end intelligent spatial engine that converts standard smartphone captures of indoor environments into interactive 3D digital twins. The system should support remote first-person walkthroughs, spatial Point of Interest (POI) discovery and obstacle-aware indoor path planning. The longer-term vision includes on-site phone-camera navigation.
+
+Round 1 focuses on:
+1. A Standard Operating Procedure (SOP) for capturing an indoor space.
+2. 3D model reconstruction from captured data.
+3. A zero-install desktop/web viewer.
+4. Smooth first-person free roaming using standard controls such as WASD and mouse.
+5. Free roaming must work even when active navigation is not running.
+
+POI search and obstacle-aware desktop pathfinding are the focus of Round 2. AR navigation is an advanced bonus. Do not describe future or mock functionality as completed Round 1 functionality.
+
+B. OFFICIAL ROUND 1 SUBMISSION REQUIREMENTS
+The official problem statement (page 3) requires a Google Drive folder link with “Anyone with the link can view” permission. It must contain:
+
+1. TECHNICAL ABSTRACT PDF — maximum 5 pages:
+   - System architecture.
+   - Pipeline design.
+   - SOP construction details.
+   - Technical approach.
+
+2. PROOF OF CONCEPT & WEB VIEWER LINK:
+   - A document containing the working web-viewer URL.
+   - The viewer must allow free-roaming in the reconstructed 3D space.
+   - Test the URL in a private/incognito browser.
+   - Screenshots or a video alone do not replace the working viewer link.
+
+3. DEMONSTRATION VIDEO — 3 to 5 minutes:
+   - Explain project scope.
+   - Show the indoor capture process.
+   - Show the resulting 3D web walkthrough.
+   - Demonstrate free-roaming clearly.
+
+4. CODE REPOSITORY:
+   - Link/folder containing code.
+   - Setup instructions to reconstruct the model.
+   - Sample data inside a test directory.
+
+Additional Drive organisation rule (official problem statement, page 5): supplementary links, live demos, prototype URLs and technical documents must be neatly organised inside one master PDF or Google Doc in the Drive folder. Loose, unorganised links will not be reviewed. Keep folder access “Anyone with the link can view”.
+
+Round 1 evaluation criteria (page 3):
+- SOP & Pipeline Soundness.
+- Visual Quality & Model Fidelity.
+- Web Viewer Performance.
+- Documentation & Video Clarity.
+
+The brief permits available third-party depth-analysis/stitching technologies, subject to applicable licences and credit in the technical abstract. The solution must be the team's original work.
+
+C. FULL REPOSITORY INSPECTION
+Inspect the entire repository, not just README or top-level files.
+1. Print/review the full directory tree.
+2. Identify frontend framework, language, build system and package manager.
+3. Identify 3D rendering/viewer libraries and versions.
+4. Identify reconstruction, photogrammetry, Gaussian splatting, NeRF, depth estimation, stitching, mesh-generation or point-cloud tools actually used.
+5. Inspect code for capture/upload, preprocessing, reconstruction, model loading/rendering, camera controls, first-person movement, collision handling, scene loading, UI and asset management.
+6. Inspect configuration, package manifests, build scripts, deployment settings and environment-variable examples.
+7. Inventory 3D assets/formats: GLB, GLTF, OBJ, FBX, PLY, SPLAT, point clouds, textures, depth maps, etc.
+8. Inspect sample images/videos/data. Do not expose private imagery or sensitive metadata.
+9. Inspect tests and scripts. Distinguish tests present from tests actually executed.
+10. Inspect Git metadata if available; record branch/commit only when verifiable.
+11. Determine whether this is a static demo, model viewer, offline reconstruction pipeline or complete end-to-end system. Explain evidence.
+12. Determine whether the model is hard-coded/pre-generated, generated offline, uploaded by a user or reconstructed dynamically.
+Do not assume a dependency is used just because it appears in package.json. Confirm source usage.
+
+D. INDOOR CAPTURE SOP
+Find the actual capture procedure in repository files, notes or assets. Document:
+- Captured space, rooms/levels and area only if evidenced.
+- Device/camera details if known.
+- Whether inputs are images, video, floor plans, depth sensors or other data.
+- Capture route and sequence.
+- Camera height, angles, overlap, distance and lighting guidance if defined.
+- How corners, doors, walls, furniture and room transitions are captured.
+- File naming/folder organisation.
+- Preprocessing and cleaning.
+- Reconstruction command/tool and parameters.
+- Processing time only if measured.
+- Quality-control and failure recovery.
+
+If no SOP exists, say so. You may draft a separate “Recommended SOP — Not Yet Validated”, but never present it as a procedure already performed.
+
+Show the workflow: Capture → Organise → Preprocess → Reconstruct → Validate → Package → Deploy → Explore.
+
+E. 3D RECONSTRUCTION PIPELINE
+Describe the actual pipeline stage by stage:
+- Input formats.
+- Preprocessing.
+- Camera pose estimation/feature extraction, if used.
+- Depth estimation, if used.
+- Multi-view reconstruction/photogrammetry/Gaussian splatting/NeRF/mesh generation, whichever is actually used.
+- Texture generation.
+- Model optimisation/compression.
+- Output formats.
+- Asset storage and delivery to viewer.
+
+For every stage, state purpose, exact tool/script, input, output, source file path, implementation status and limitations. If the project only loads a pre-generated GLB/GLTF or other asset, say so. Do not describe model loading as automatic reconstruction.
+
+F. WEB VIEWER AND FREE-ROAMING
+Inspect and explain:
+- Viewer URL and hosting provider, if deployed.
+- Scene/model loading process.
+- Rendering engine and version.
+- Camera type and initial position.
+- First-person controls.
+- WASD/arrow-key support.
+- Mouse look/pointer-lock behaviour.
+- Movement speed and adjustable controls, if present.
+- Vertical movement, if present.
+- Collision detection/floor constraints, if implemented.
+- Whether free roaming works without navigation running.
+- Loading indicators/error states.
+- Desktop/tablet/mobile responsiveness.
+- Browser compatibility, if tested.
+- Performance evidence such as asset size, load time, FPS or memory, only if measured.
+
+Verify the mandatory behaviour: users must freely move and look around the 3D space with standard desktop controls even when active navigation is not running. If movement only orbits/zooms around a fixed object, do not call it first-person free roaming. Explain and mark the requirement as not satisfied.
+
+G. POI, PATHFINDING AND AR STATUS
+Inspect whether these already exist, and classify each as:
+- Implemented and working.
+- Partially implemented.
+- UI/mockup only.
+- Planned.
+- Not implemented.
+
+Do not claim POI search, collision-free routing, navigation graphs, A*, navmeshes, AR tracking or camera overlays without implementation evidence.
+
+Provide a future Round 2 plan covering POI schema/3D coordinates, clickable tagging, search indexing, walkable floor representation, obstacle representation, graph/grid/navmesh construction, pathfinding algorithm, path visualisation and validation against walls/furniture. Keep AR bonus roadmap separate.
+
+H. TESTING AND VALIDATION
+Inspect and report unit/integration/e2e tests, build/type-check/lint commands, actual command outputs if executed, model integrity checks, asset loading, viewer interaction, free-roam, browser/device testing and known bugs.
+Use a table: Requirement | Evidence | Status | Remaining work.
+Never say “all tests passed” unless executed and output captured. If tests are absent, say so and recommend manual checks.
+
+I. DEPLOYMENT AND ACCESSIBILITY
+Determine whether app is deployed, exact public URL, hosting platform, whether assets load, whether authentication is required, whether it works in incognito, whether URL is stable/public or local, and any file-size/CORS/storage/bandwidth constraints.
+If not deployed, clearly state that a public working web viewer is still required for Round 1. Recommend hosting options suited to the stack, but do not deploy or claim deployment unless authorised and actually completed.
+
+J. THIRD-PARTY, OPEN-SOURCE AND AI DISCLOSURE
+Prepare a table: tool/library, version, purpose, licence (only if verifiable), source location, runtime or development-only use.
+Include 3D engine/viewer, reconstruction tools, image/video processing, hosting, datasets/assets, icons/fonts and AI tools used during development. Do not invent licences; flag unknowns.
+
+K. REQUIRED OUTPUT
+Create a detailed Markdown file named:
+GEONEXUS_NAMMA_SPACE_COMPLETE_PROJECT_DOCUMENTATION.md
+
+Include:
+1. Cover and project identity.
+2. Executive summary.
+3. Competition objective and Round 1 alignment.
+4. Problem understanding.
+5. Current project overview.
+6. Implemented feature inventory.
+7. System architecture.
+8. Technology stack.
+9. Actual and proposed SOP, clearly separated.
+10. 3D reconstruction pipeline.
+11. Web viewer architecture.
+12. Free-roaming implementation and controls.
+13. POI/pathfinding/AR status and roadmap.
+14. Data/assets inventory.
+15. Testing and validation.
+16. Deployment and accessibility.
+17. Security, privacy and asset considerations.
+18. Third-party/open-source/AI disclosure.
+19. Known limitations and risks.
+20. Round 1 requirement compliance matrix.
+21. Round 2 roadmap.
+22. Round 3 on-site readiness roadmap.
+23. Demo video storyboard for a 3–5 minute video.
+24. Submission folder structure and checklist.
+25. References and repository file map.
+
+Use detailed explanations, tables and exact source paths/line numbers where possible. Keep claims evidence-based.
+
+L. RECOMMENDED GOOGLE DRIVE STRUCTURE
+GeoNexus_NammaSpace_Round1/
+  01_Technical_Abstract/
+    GeoNexus_Technical_Abstract.pdf  (maximum 5 pages)
+  02_Proof_of_Concept/
+    Web_Viewer_Access_and_Instructions.pdf
+  03_Demonstration_Video/
+    GeoNexus_Round1_Demo.mp4        (3–5 minutes)
+  04_Code_Repository/
+    Repository_Link_and_Setup.pdf or README
+    source code/repository link
+      test/
+        sample data
+  05_Master_Links_and_Supplementary_Materials/
+    Additional_Links_and_Prototypes.pdf
+
+The four official required deliverables are the technical abstract, proof-of-concept/web-viewer link document, demo video and code repository. The master links document organises supplementary links/materials as required by page 5.
+
+M. FINAL AUDIT SUMMARY
+At the beginning and end, state:
+- What is implemented and working.
+- What is implemented but unverified.
+- What is partial.
+- What is not implemented.
+- What is required before Round 1.
+- What can wait until Round 2.
+- What is a bonus for later rounds.
+
+Create an “URGENT ROUND 1 BLOCKERS” section, prioritising:
+1. Valid indoor capture SOP.
+2. Actual 3D reconstructed model from captured space.
+3. Working public web viewer.
+4. Genuine first-person free-roaming controls.
+5. 3–5 minute demo video.
+6. Technical abstract within five pages.
+7. Code repository with setup instructions and sample data in test directory.
+8. Google Drive permissions and organisation.
+
+Do not claim compliance if a mandatory item is missing. Be direct and specific.
+
+N. AGENT INSTRUCTIONS
+- Inspect the entire repository and all supplied project files before writing.
+- Do not ask for details already present in the repository.
+- Do not modify source code; this is a documentation and audit task.
+- Do not create fake screenshots or fabricated demo evidence.
+- Do not invent URLs, measurements, tests, team members or data sources.
+- Separate implemented, tested, verified, planned and not implemented.
+- If you cannot access a running app, say so and provide manual verification steps.
+- Identify contradictory claims rather than silently resolving them.
+- Make the report detailed enough for an engineer and judge to understand the project without an oral explanation.
+- Save the Markdown report in the project root and provide a concise summary of urgent submission gaps.
+
+END OF MASTER PROMPT

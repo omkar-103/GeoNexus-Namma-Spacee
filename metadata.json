@@ -1,0 +1,6 @@
+{
+  "name": "Namma Space - Intelligent Indoor Digital Twin & Spatial Navigation",
+  "description": "Interactive 3D indoor digital-twin platform with first-person roaming, obstacle-aware A* pathfinding, spatial POI indexing, and Route Trust inspection.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
